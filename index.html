@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html ng-app="">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" type="text/javascript">
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+<link rel="shortcut icon" href="img/favicon.ico">
+    <title>YouFolio</title>
+</head>
+
+<body>
+    <div id="header" class="row-fluid">
+        <span id="topLogo"><img src="img/FinalLogo_Green.png" width="100px" height="auto"></span> <span id="alreadyRegistered"><a class="loginText" href="#loginModal" role="button" data-toggle="modal">login</a> | <a class="loginText" href="#companyModal" role="button" data-toggle="modal">companies</a></span>
+
+        <div id="myCarousel" class="carousel slide">
+            <ol id="carouselNav" class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+    
+            </ol><!-- Carousel items -->
+
+            <div class="carousel-inner">
+                <div class="active item">
+                    <div id="firstItem">
+                    <div class="itemContent">
+                    <span class="topRoboto">YouFolio helps you showcase yourself to the world.</span>
+                    <br/>
+                        <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span><br>
+                        <br/>
+                        <a href="#signupModal" role="button" data-toggle="modal" class="btn btn-youfolio btn-large signupButton">sign up</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div id="secondItem">
+                        <div class="itemContent">
+                    <span class="topRoboto">YouFolio helps you discover collaborators and job opportunities.</span>
+                    <br/>
+                        <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span><br>
+                        <br/>
+                        <a href="#signupModal" role="button" data-toggle="modal" class="btn btn-youfolio btn-large signupButton">sign up</a>
+                    </div>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div id="thirdItem">
+                        <div class="itemContent">
+                    <span class="topRoboto">YouFolio helps you showcase yourself to the world.</span>
+                    <br/>
+                        <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span><br>
+                        <br/>
+                        <a href="#signupModal" role="button" data-toggle="modal" class="btn btn-youfolio btn-large signupButton">sign up</a>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="row1" class="row-fluid">
+        <div class="span4 offset4">
+            <h3>HOW IT WORKS</h3>
+        </div>
+    </div>
+    
+    <div id="works" class="row-fluid">
+    <div class="span2 offset2 centered">
+    <img src="img/create.png" alt="create"/>
+    <p>1. CREATE</p>
+    </div>
+    <div class="span2 offset1 centered">
+    <img src="img/connected.png" alt="connect"/>
+    <p>2. CONNECT</p>
+    </div>
+    <div class="span2 offset1 centered">
+    <img src="img/collaborate.png" alt="collaborate"/>
+    <p>3. COLLABORATE</p>
+    </div>
+    </div>
+
+
+    <div id="row2" class="row-fluid">
+        <div class="span4 offset4">
+            <h3>ONE STOP SHOP</h3>
+
+            <p class="infoText">Youfolio imports all the information you want from all of your favorite and essential social platforms to one place.</p>
+        </div>
+    </div>
+    
+    <div id="socialIcons" class="row-fluid">
+    <div class="span8 offset2" style="text-align:center;">
+    <img id="socialIconImg" src="img/social.png" alt="social"/>
+    </div>
+    </div>
+    
+    <div id="yfFolder" class="row-fluid">
+    <div class="span2 offset5" style="text-align:center;">
+    <img src="img/yfFolder.png" alt="folder"/>
+    </div>
+    </div>
+
+    <div id="row3" class="row-fluid">
+        <div class="span4 offset4">
+            <h3>THIS IS YOUFOLIO</h3>
+
+            <p class="infoText">Take control of your professional online presence and stand out better than you may be able to do on LinkedIn, Facebook, Twitter, Pinterest or others.</p>
+        </div>
+    </div>
+
+    <div id="row4" class="row-fluid">
+        <div class="span10 offset1" style="text-align:center;">
+            <h3>MEET THE TEAM</h3>
+        </div>
+    </div>
+    
+    <div id="team" class="row-fluid">
+    <div class="span2 offset2">
+    <img src="img/kayvon.png" alt="folder"/>
+    Kayvon Kaviani
+    </div>
+    <div class="span2 offset1">
+    <img src="img/matt.png" alt="folder"/>
+    Matthew D. Moore
+    </div>
+    <div class="span2 offset1">
+    We believe a few great people can make a big difference. We strive to hire the very best - people who are passionate, thoughtful and creative. We believe it is our obligation to relentlessly focus on what the learner values, and we make every decision with the learner in mind.
+    </div>
+    </div>
+
+    <div id="footer" class="row-fluid">
+        <div class="span2">
+            YouFolio
+        </div>
+
+        <div class="span3">
+            Copyright 2013 All rights reserved
+        </div>
+
+        <div class="span4 offset3">
+            <a href="">My Portfolio</a> <a href="">Gallery</a> <a href="">Job Board</a> <a href="">Help</a>
+        </div>
+    </div><!--Begin Login Modal-->
+
+    <div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+
+            <h3 id="loginModalLabel">Login</h3>
+        </div>
+
+        <div class="modal-body">
+            <form id="loginForm" class="form-inline" method="post" action="login.html">
+                <label>Username</label> <input id="loginUsername" name="loginUsername" type="text" placeholder="Username"> <label>Password</label> <input id="loginPassword" name="loginPassword" type="password" placeholder="Password"> <label class="checkbox"><input type="checkbox" name="rememberMe" id="rememberMe"> Remember me</label>
+            
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button> <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+        </form>
+    </div><!--End Login Modal-->
+    <!--Begin Signup Modal-->
+
+    <div id="signupModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+
+            <h3 id="signupModalLabel">Sign Up</h3>
+        </div>
+
+        <div class="modal-body">
+            <input id="signupFirstName" name="signupFirstName" type="text" placeholder="First Name"/><br/>
+            <input id="signupLastName" name="signupLastName" type="text" placeholder="Last Name"/><br/>
+            <input id="signupUsername" name="signupUsername" type="text" placeholder="Username"/><br/> 
+            <input id="signupPassword" name="signupPassword" type="password" placeholder="Password"/><br/>
+            <input id="signupPasswordConfirm" name="signupPasswordConfirm" type="password" placeholder="Confirm Password"/><br/>
+            <input id="signupEmail" name="signupEmail" type="email" placeholder="Email Address"/>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button> <button class="btn btn-primary">Submit</button>
+        </div>
+    </div><!--End Signup Modal-->
+    <script src="http://code.jquery.com/jquery.js" type="text/javascript">
+</script><script src="js/bootstrap.min.js" type="text/javascript">
+</script>
+</body>
+</html>
