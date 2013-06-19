@@ -11,9 +11,10 @@
 @boldItalic: "latobold_italic";
 @roboto: 'Roboto Slab';
 
-body
+body,html
 {
 	font-family: @regular;
+	height:100%;
 }
 #header
 {
@@ -98,6 +99,29 @@ margin-top: -25px;
 {
 	color:@youfolioGreen;
 	background-color: #363841;
+	font-size: 120%;
+	height:60px;
+	width:100%;
+	/* WebKit (Chrome & Safari) */
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    
+    /* Firefox */
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    
+    /* IE */
+    display: -ms-box;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    
+     /* Native CSS */
+    display: box;
+    box-pack: center;
+    box-align: center;
+
 }
 /*#loginModal{
 	width:760px;
@@ -108,14 +132,33 @@ margin-top: -25px;
 	font-family: @regular;
 	position: absolute;
 	z-index:1;
-	left:200px;
+	left:15%;
 }
 #alreadyRegistered
 {
 	font-family: @light;
 	position: absolute;
 	z-index:1;
-	left:1000px;
+	left:75%;
+	
+	a:link
+	{
+	color:white;	
+	}
+	a:visited
+	{
+	color:white;	
+	}
+	a:active
+	{
+	color:white;	
+	}
+	a:hover
+	{
+	color:@youfolioGreen;	
+	text-decoration: none;
+	}
+	
 }
 .loginText
 {
@@ -314,5 +357,87 @@ width:20%;
 .whiteIcon
 {
 color:white !important;
+}
+
+.bottomLogo
+{
+width:14%;
+margin-right: 5%;
+}
+.bottomImage
+{
+width:80%;
+height:auto;
+}
+
+.copyright
+{
+
+color:#53565e;
+}
+
+.bottomLinks
+{
+margin-left: 30%;
+
+a
+{
+padding-left: 5px;
+padding-right: 5px;	
+}
+a:link
+{
+color:#53565e;
+}
+a:visited
+{
+color:#53565e;
+}
+a:active
+{
+color:#53565e;
+}
+a:hover
+{
+color:#53565e;
+text-decoration: none;
+}
+}
+
+.verticalCenter
+{
+ /* WebKit (Chrome & Safari) */
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    
+    /* Firefox */
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    
+    /* IE */
+    display: -ms-box;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    
+     /* Native CSS */
+    display: box;
+    box-pack: center;
+    box-align: center;
+
+}
+
+#collaborateImg
+{
+padding-top: 26.5px;
+padding-bottom: 16.5px;
+}
+
+.leftBar
+{
+width:15%;
+height:100%;
+background-color:@youfolioGreen;
 }
 

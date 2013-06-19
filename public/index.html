@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html ng-app="">
+<html ng-app>
 <head>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" type="text/javascript">
@@ -16,7 +16,7 @@
 
 <body>
     <div id="header" class="row-fluid">
-        <span id="topLogo"><img src="img/FinalLogo_Green.png" width="100px" height="auto"></span> <span id="alreadyRegistered"><a class="loginText" href="#loginModal" role="button" data-toggle="modal">login</a> | <a class="loginText" href="#companyModal" role="button" data-toggle="modal">companies</a></span>
+        <span id="topLogo"><img src="img/FinalLogo_White.png" width="100px" height="auto"></span> <span id="alreadyRegistered"><a class="loginText" href="#loginModal" role="button" data-toggle="modal">login</a> | <a class="loginText" href="#companyModal" role="button" data-toggle="modal">companies</a></span>
 
         <div id="myCarousel" class="carousel slide">
             <ol id="carouselNav" class="carousel-indicators">
@@ -76,7 +76,7 @@
     
     <div id="works" class="row-fluid">
     <div class="span2 offset2 centered">
-    <img src="img/create.png" alt="create"/>
+    <img src="img/create.png" alt="create" id="createImg"/>
     <p>1. CREATE</p>
     </div>
     <div class="span2 offset1 centered">
@@ -84,7 +84,7 @@
     <p>2. CONNECT</p>
     </div>
     <div class="span2 offset1 centered">
-    <img src="img/collaborate.png" alt="collaborate"/>
+    <img src="img/collaborate.png" alt="collaborate" id="collaborateImg"/>
     <p>3. COLLABORATE</p>
     </div>
     </div>
@@ -142,19 +142,15 @@
     </div>
     </div>
 
-    <div id="footer" class="row-fluid">
-        <div class="span2">
-            YouFolio
+    <div id="footer">
+        <div class="bottomLogo">
+            <a class="" href="#"><img class="bottomImage" src="img/FinalLogo_Grey.png" alt="YouFolio"/></a>
         </div>
-
-        <div class="span3">
-            Copyright 2013 All rights reserved
-        </div>
-
-        <div class="span4 offset3">
-            <a href="">My Portfolio</a> <a href="">Gallery</a> <a href="">Job Board</a> <a href="">Help</a>
-        </div>
-    </div><!--Begin Login Modal-->
+            <span class="copyright">Copyright 2013 All rights reserved</span>
+            <span class="bottomLinks"><a href="">My Portfolio</a> <a href="">Gallery</a> <a href="">Job Board</a> <a href="">Help</a></span>
+    </div>
+    
+    <!--Begin Login Modal-->
 
     <div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-header">
@@ -164,7 +160,7 @@
         </div>
 
         <div class="modal-body">
-            <form id="loginForm" class="form-inline" method="post" action="login.html">
+            <form id="loginForm" name="loginForm" class="form-inline" method="post" action="login.html">
                 <label>Username</label> <input id="loginUsername" name="loginUsername" type="text" placeholder="Username"> <label>Password</label> <input id="loginPassword" name="loginPassword" type="password" placeholder="Password"> <label class="checkbox"><input type="checkbox" name="rememberMe" id="rememberMe"> Remember me</label>
             
         </div>
@@ -179,11 +175,11 @@
     <div id="signupModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-
             <h3 id="signupModalLabel">Sign Up</h3>
         </div>
 
         <div class="modal-body">
+        <form id="signupForm" name="signupForm" class="form-inline" method="post" action="/user/create">
             <input id="signupFirstName" name="signupFirstName" type="text" placeholder="First Name"/><br/>
             <input id="signupLastName" name="signupLastName" type="text" placeholder="Last Name"/><br/>
             <input id="signupUsername" name="signupUsername" type="text" placeholder="Username"/><br/> 
@@ -195,6 +191,7 @@
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button> <button class="btn btn-primary">Submit</button>
         </div>
+    </form>
     </div><!--End Signup Modal-->
     <script src="http://code.jquery.com/jquery.js" type="text/javascript">
 </script><script src="js/bootstrap.min.js" type="text/javascript">

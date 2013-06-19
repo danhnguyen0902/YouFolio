@@ -1,8 +1,10 @@
 @import url("../fonts/lato/stylesheet.css");
 
 @import url("http://fonts.googleapis.com/css?family=Roboto+Slab");
-body {
+body,
+html {
   font-family: "latoregular";
+  height: 100%;
 }
 #header {
   color: white;
@@ -77,6 +79,29 @@ body {
 #footer {
   color: #02bc9b;
   background-color: #363841;
+  font-size: 120%;
+  height: 60px;
+  width: 100%;
+  /* WebKit (Chrome & Safari) */
+
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /* Firefox */
+
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  /* IE */
+
+  display: -ms-box;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+  /* Native CSS */
+
+  display: box;
+  box-pack: center;
+  box-align: center;
 }
 /*#loginModal{
 	width:760px;
@@ -86,13 +111,26 @@ body {
   font-family: "latoregular";
   position: absolute;
   z-index: 1;
-  left: 200px;
+  left: 15%;
 }
 #alreadyRegistered {
   font-family: "latolight";
   position: absolute;
   z-index: 1;
-  left: 1000px;
+  left: 75%;
+}
+#alreadyRegistered a:link {
+  color: white;
+}
+#alreadyRegistered a:visited {
+  color: white;
+}
+#alreadyRegistered a:active {
+  color: white;
+}
+#alreadyRegistered a:hover {
+  color: #02bc9b;
+  text-decoration: none;
 }
 .loginText {
   font-family: "latoregular";
@@ -260,4 +298,66 @@ body {
 }
 .whiteIcon {
   color: white !important;
+}
+.bottomLogo {
+  width: 14%;
+  margin-right: 5%;
+}
+.bottomImage {
+  width: 80%;
+  height: auto;
+}
+.copyright {
+  color: #53565e;
+}
+.bottomLinks {
+  margin-left: 30%;
+}
+.bottomLinks a {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.bottomLinks a:link {
+  color: #53565e;
+}
+.bottomLinks a:visited {
+  color: #53565e;
+}
+.bottomLinks a:active {
+  color: #53565e;
+}
+.bottomLinks a:hover {
+  color: #53565e;
+  text-decoration: none;
+}
+.verticalCenter {
+  /* WebKit (Chrome & Safari) */
+
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /* Firefox */
+
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  /* IE */
+
+  display: -ms-box;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+  /* Native CSS */
+
+  display: box;
+  box-pack: center;
+  box-align: center;
+}
+#collaborateImg {
+  padding-top: 26.5px;
+  padding-bottom: 16.5px;
+}
+.leftBar {
+  width: 15%;
+  height: 100%;
+  background-color: #02bc9b;
 }
