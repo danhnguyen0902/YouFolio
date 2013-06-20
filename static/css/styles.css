@@ -409,6 +409,9 @@ html {
 .yfnav a:hover {
   color: #02bc9b !important;
 }
+.thumbnail {
+  position: relative;
+}
 .thumbnail:hover img {
   animation: grayscale 1s;
   -webkit-animation: grayscale 1s;
