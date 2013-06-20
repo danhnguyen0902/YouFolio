@@ -428,6 +428,7 @@ html {
 
 }
 .thumbnail:hover .caption {
+  font-family: "latoregular";
   color: white;
   background-color: #02bc9b;
   height: 100px;
@@ -451,4 +452,16 @@ html {
 .imgIcons i {
   padding-left: 10px;
   padding-right: 10px;
+}
+.imgIcons i:hover {
+  color: #02bc9b;
+}
+#portfolioPage {
+  background-color: #f6f7fb;
+}
+.navbar-inner {
+  border: none !important;
+  background-image: none !important;
+  background-color: white !important;
+  font-family: "latoregular" !important;
 }
