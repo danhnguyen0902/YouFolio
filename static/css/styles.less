@@ -522,28 +522,23 @@ color:@youfolioGreen !important;
 }
 }
 
-.thumbnail
-{
--webkit-transition: all 1s ease-in-out;
--moz-transition: all 1s ease-in-out;
--o-transition: all 1s ease-in-out;
--ms-transition: all 1s ease-in-out;
-transition: all 1s ease-in-out;
-}
 .thumbnail:hover
 {
 img
 {
-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+animation:grayscale 1s;
+-webkit-animation:grayscale 1s; /* Safari and Chrome */
+animation-fill-mode: forwards;  
+-webkit-animation-fill-mode: forwards;  
 }
 .caption
 {
 font-family: @regular;
 color:white;
-background-color:@youfolioGreen;
-height:100px;
+animation:stretchContent 1s;
+-webkit-animation:stretchContent 1s; /* Safari and Chrome */
+animation-fill-mode: forwards;  
+-webkit-animation-fill-mode: forwards;  
 .tags
 {
 display: inline-block;
@@ -590,3 +585,62 @@ background-image:none !important;
 background-color: white !important;
 font-family: @regular !important;
 }
+@keyframes stretchContent
+{
+from 
+{
+height: 88px;
+background-color:white;
+}
+to 
+{
+height: 100px;
+background-color:@youfolioGreen;
+}
+}
+
+@-webkit-keyframes stretchContent /* Safari and Chrome */
+{
+from 
+{
+height: 88px;
+background-color:white;
+}
+to 
+{
+height: 100px;
+background-color:@youfolioGreen;
+}
+}
+
+@keyframes grayscale
+{
+from 
+{
+
+}
+to 
+{
+filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+}
+
+@-webkit-keyframes grayscale /* Safari and Chrome */
+{
+from 
+{
+
+}
+to 
+{
+filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+}
+
+
+
+
