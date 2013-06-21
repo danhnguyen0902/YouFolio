@@ -448,12 +448,17 @@ html {
   color: white;
   display: none;
 }
-.imgIcons i {
+.imgIcons a {
+  color: white;
   padding-left: 15px;
   padding-right: 15px;
 }
-.imgIcons i:hover {
+.imgIcons a:visited {
+  color: white;
+}
+.imgIcons a:hover {
   color: #02bc9b;
+  text-decoration: none;
 }
 #portfolioPage {
   background-color: #f6f7fb;
@@ -509,4 +514,16 @@ html {
     /* Chrome 19+, Safari 6+, Safari 6+ iOS */
   
   }
+}
+#contentModal {
+  height: 80%;
+  width: 760px;
+  margin-left: -380px;
+}
+#contentImage {
+  width: 100%;
+  height: auto;
+}
+#contentInner {
+  max-height: 540px;
 }

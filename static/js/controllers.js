@@ -52,4 +52,7 @@ function portfolioController($scope) {
 	$scope.occupation = "Graphic Designer";
 	$scope.city = "Alexandria";
 	$scope.state = "VA";
+	$scope.phone = "(867)-555-5309";
+	$scope.email = "email@website.com";
+	$scope.skype = "skypeusername";
 }
