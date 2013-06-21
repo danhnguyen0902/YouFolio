@@ -47,4 +47,9 @@ function portfolioController($scope) {
 		"date": "16 June 2013",
 		"tags": "tag1, tag2",
 	}, ];
+	$scope.fname = "Drew";
+	$scope.lname = "Ellis";
+	$scope.occupation = "Graphic Designer";
+	$scope.city = "Alexandria";
+	$scope.state = "VA";
 }
