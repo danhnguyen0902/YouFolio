@@ -103,7 +103,7 @@ class UserAPI(MethodView):
                 user.__setattr__(field_name, request.form[field_name])
 
         try:
-            new_user.save()
+            user.save()
         except Exception, e:
             return ('Invalid Input: %s' % e.message, 400, None)
         else:
