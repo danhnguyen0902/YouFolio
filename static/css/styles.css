@@ -9,23 +9,48 @@ html {
 }
 #header {
   color: white;
-  height: 504px;
+  height: 479px;
   background-color: #02bc9b;
   margin-bottom: 10px;
 }
-#myCarousel {
+#landingCarousel {
   margin-top: -25px;
+  height: 504px;
 }
-#carouselNav {
+#jobsCarousel {
+  height: 325px;
+}
+.carousel-inner {
+  height: 100%;
+}
+.carousel-inner .item {
+  height: 100%;
+}
+.carousel-inner .active.item {
+  height: 100%;
+}
+#carouselNavLanding {
   text-align: center;
   width: 90px;
   margin-left: -45px;
   margin-bottom: 30px;
   position: absolute;
-  top: 531px;
+  top: 506px;
   left: 50%;
 }
-#carouselNav li {
+#carouselNavLanding li {
+  margin: 10px;
+}
+#carouselNavJobs {
+  text-align: center;
+  width: 120px;
+  margin-left: -60px;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 331px;
+  left: 50%;
+}
+#carouselNavJobs li {
   margin: 10px;
 }
 #row1 {
@@ -143,7 +168,7 @@ html {
   background-image: url("../img/cimg1.png");
   text-align: center;
   width: 100%;
-  height: 504px;
+  height: 100%;
 }
 .itemContent {
   width: 50%;
@@ -174,7 +199,7 @@ html {
   text-align: center;
   background-color: grey;
   width: 100%;
-  height: 504px;
+  height: 100%;
 }
 #thirdItem {
   /* WebKit (Chrome & Safari) */
@@ -202,7 +227,35 @@ html {
   text-align: center;
   background-color: grey;
   width: 100%;
-  height: 504px;
+  height: 100%;
+}
+#fourthItem {
+  /* WebKit (Chrome & Safari) */
+
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /* Firefox */
+
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  /* IE */
+
+  display: -ms-box;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+  /* Native CSS */
+
+  display: box;
+  box-pack: center;
+  box-align: center;
+  margin-top: 25px;
+  background-image: url("../img/cimg3.png");
+  text-align: center;
+  background-color: grey;
+  width: 100%;
+  height: 100%;
 }
 .lightItalic {
   font-family: "latolight_italic";
@@ -532,7 +585,7 @@ html {
 #contentInner {
   max-height: 530px;
 }
-.btn-edit {
+.btn-dark {
   background-color: #333a47 !important;
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3b4352", endColorstr="#333946");
@@ -548,4 +601,36 @@ html {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.06);
   -webkit-font-smoothing: antialiased;
   font-size: 10pt;
+}
+.btn-pink {
+  background-color: #d26565 !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d67474", endColorstr="#d26464");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#d67474), to(#d26464));
+  background-image: -moz-linear-gradient(top, #d67474, #d26464);
+  background-image: -ms-linear-gradient(top, #d67474, #d26464);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d67474), color-stop(100%, #d26464));
+  background-image: -webkit-linear-gradient(top, #d67474, #d26464);
+  background-image: -o-linear-gradient(top, #d67474, #d26464);
+  background-image: linear-gradient(#d67474, #d26464);
+  border-color: #d26464 #d26464 #d16161;
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.06);
+  -webkit-font-smoothing: antialiased;
+  color: white;
+}
+.carouselJobInfo {
+  padding: 10px;
+  height: 50%;
+  background-color: rgba(59, 62, 69, 0.75);
+  color: white;
+  text-align: left;
+}
+.graySearch {
+  font-family: "latoregular";
+  background-color: #363940 !important;
+  color: #85909b !important;
+}
+.jobSearchRow {
+  margin-top: 25px;
 }
