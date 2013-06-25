@@ -146,5 +146,5 @@ if __name__ == "__main__":
     parser.add_argument('--heroku', help='run with heroku configuration', action='store_true')
     args = parser.parse_args()
     if args.heroku:
-        app.config['MONGODB_SETTINGS']
-    # app.run(host="0.0.0.0", port=4000)
+        app.config.from_pyfile('heroku.cfg')
+    app.run(host="0.0.0.0", port=4000)
