@@ -10,30 +10,17 @@ from flask.views import MethodView
 from flask.ext.mongoengine import MongoEngine
 from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.login import (LoginManager, current_user, login_required,
-                            login_user, logout_user, UserMixin, AnonymousUser,
+                            login_user, logout_user, UserMixin, 
+                            # AnonymousUser,
                             confirm_login, fresh_login_required)
+import argparse
 
 UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__, static_url_path='')
 app.config.from_object(__name__)
-app.config['MONGODB_SETTINGS'] = {'DB': 'testing'}
-app.config['TESTING'] = True
-app.config['SECRET_KEY'] = 'flask+mongoengine=<3'
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
-app.debug = True
-app.config['DEBUG_TB_PANELS'] = (
-    'flask.ext.debugtoolbar.panels.versions.VersionDebugPanel',
-    'flask.ext.debugtoolbar.panels.timer.TimerDebugPanel',
-    'flask.ext.debugtoolbar.panels.headers.HeaderDebugPanel',
-    'flask.ext.debugtoolbar.panels.request_vars.RequestVarsDebugPanel',
-    'flask.ext.debugtoolbar.panels.template.TemplateDebugPanel',
-    'flask.ext.debugtoolbar.panels.logger.LoggingPanel',
-    'flask.ext.mongoengine.panels.MongoDebugPanel'
-)
-
-app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+app.config.from_pyfile('config.cfg')
 
 db = MongoEngine()
 db.init_app(app)
@@ -154,4 +141,10 @@ def uploaded_file(filename):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=4000)
+    app.debug = True
+    parser = argparse.ArgumentParser(description='Main flask app for YouFolio')
+    parser.add_argument('--heroku', help='run with heroku configuration', action='store_true')
+    args = parser.parse_args()
+    if args.heroku:
+        app.config['MONGODB_SETTINGS']
+    # app.run(host="0.0.0.0", port=4000)
