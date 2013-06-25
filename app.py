@@ -22,9 +22,6 @@ app = Flask(__name__, static_url_path='')
 app.config.from_object(__name__)
 app.config.from_pyfile('config.cfg')
 
-db = MongoEngine()
-db.init_app(app)
-
 DebugToolbarExtension(app)
 
 
@@ -147,4 +144,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.heroku:
         app.config.from_pyfile('heroku.cfg')
+    db = MongoEngine()
+    db.init_app(app)
     app.run(host="0.0.0.0", port=4000)
