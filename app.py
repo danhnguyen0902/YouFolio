@@ -27,12 +27,13 @@ db = MongoEngine()
 
 
 class User(db.Document):
-    username = db.StringField(required=True, max_length=50, min_length=2)
+    username = db.StringField(required=True, max_length=50, min_length=2, primary_key=True)
     password = db.StringField(required=True, max_length=50, min_length=4)
     email = db.EmailField(required=True, max_length=100)
     first_name = db.StringField(max_length=50, min_length=2)
     last_name = db.StringField(max_length=50, min_length=2)
     files = db.ListField(db.GridFSProxy)
+    meta = {'indexes': [{'fields': ['username'], 'unique': True}]}
 
     def __str__(self):
         return str(self.username)
