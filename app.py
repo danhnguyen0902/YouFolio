@@ -40,6 +40,14 @@ class User(db.Document):
     def __repr__(self):
         return "User(username=%r)" % self.username
 
+    @classmethod
+    def from_dict(cls, d):
+        user = cls()
+        for field_name in user._fields:
+            if field_name in d:
+                user.__setattr__(field_name, d[field_name])
+        return user
+
 
 @app.route('/')
 def index():
@@ -100,6 +108,20 @@ app.add_url_rule('/user/', defaults={'username': None},
 app.add_url_rule('/user/', view_func=user_view, methods=['POST', ])
 app.add_url_rule('/user/<username>', view_func=user_view,
                  methods=['GET', 'PUT', 'DELETE'])
+
+
+@app.route('/user/create', methods=['GET', 'POST'])
+def create_user():
+    if request.method == 'GET':
+        user = User.from_dict(request.args)
+    else:
+        user = User.from_dict(request.form)
+    try:
+        user.save()
+    except Exception, e:
+        return ('Invalid Input: %s' % e.message, 400, None)
+    else:
+        return 'Success'
 
 
 def allowed_file(filename):
