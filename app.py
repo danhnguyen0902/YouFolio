@@ -3,6 +3,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), '../../')))
+port = int(os.environ.get('PORT', 5000))
 
 from flask import Flask, request, render_template, redirect, url_for, flash, send_from_directory
 from werkzeug import secure_filename
@@ -146,4 +147,4 @@ if __name__ == "__main__":
         app.config.from_pyfile('heroku.cfg')
 
     db.init_app(app)
-    app.run(host="0.0.0.0", port=4000)
+    app.run(host="0.0.0.0", port=port)
