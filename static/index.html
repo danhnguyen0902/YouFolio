@@ -60,11 +60,11 @@ HORANCHORA          RANCH          8OOOOOOOO
     <div id="header" class="row-fluid">
         <span id="topLogo"><img src="img/FinalLogo_White.png" width="100px" height="auto"></span> <span id="alreadyRegistered"><a class="loginText" href="#loginModal" role="button" data-toggle="modal">login</a> | <a class="loginText" href="#companyModal" role="button" data-toggle="modal">companies</a></span>
 
-        <div id="myCarousel" class="carousel slide">
-            <ol id="carouselNav" class="carousel-indicators">
-	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
+        <div id="landingCarousel" class="carousel slide">
+            <ol id="carouselNavLanding" class="carousel-indicators">
+	        <li data-target="#landingCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#landingCarousel" data-slide-to="1"></li>
+			<li data-target="#landingCarousel" data-slide-to="2"></li>
     
             </ol><!-- Carousel items -->
 
@@ -184,18 +184,7 @@ HORANCHORA          RANCH          8OOOOOOOO
     </div>
     </div>
 
-<div class="row-fluid" id="footer">
-<div class="span2">
-<a href="http://www.youfolio.com/"><img class="bottomImage" src="img/FinalLogo_Grey.png" alt="YouFolio" onmouseover="this.src='img/FinalLogo_Green.png'" 
-onmouseout="this.src='img/FinalLogo_Grey.png'"/></a>
-</div>
-<div class="span3">
-<div class="copyright">Copyright 2013 All rights reserved</div>
-</div>
-<div class="span4 offset1">
-<div class="bottomLinks"><a href="">My Portfolio</a> <a href="">Gallery</a> <a href="">Job Board</a> <a href="">Help</a></div>
-</div>
-</div>
+<ng-include src="'includes/bottomNav.html'"></ng-include>
         
     <!--Begin Login Modal-->
 

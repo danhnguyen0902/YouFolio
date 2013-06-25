@@ -58,38 +58,13 @@ HORANCHORA          RANCH          8OOOOOOOO
 </head>
 
 <body ng-controller="portfolioController">
-<div class="navbar navbar-static-top">
-  <div class="navbar-inner">
-    <div class="container2">
- 
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
- 
-      <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="http://www.youfolio.com/"><div id="logoContainer"><img id="navBarLogo" src="img/FinalLogo_Green.png" alt="YouFolio"/></div></a>
- 
-      <!-- Everything you want hidden at 940px or less, place within here -->
-      <div class="nav-collapse collapse pull-right">
-      <ul class="nav yfnav">
-  <li><a href="#">My Portfolio</a></li>
-  <li><a href="#">Gallery</a></li>
-  <li><a href="jobBoard.html">Job Board</a></li>
-  <li><a href="#">Help</a></li>
-</ul>
-      </div>
- 
-    </div>
-  </div>
-</div>
+<ng-include src="'includes/topNav.html'"></ng-include>
 <div id="portfolioPage" class="row-fluid">
-<div class="span2 leftBar">
+<div id="leftPortfolio" class="span2 leftBar">
 <div class="leftContent">
+<a href="" role="button" class="btn btn-dark infoButtons"><i class="icon-gear"></i> &nbsp;edit profile</a>
 <img src="img/drew.jpeg"/>
-<p id="name">{{fname}} {{lname}}</p>
+<p id="name"><span ng-bind="fname"></span> <span ng-bind="lname"></span></p>
 <p id="occupation">{{occupation}}</p>
 <p id="location">{{city}}, {{state}}</p>
 <a href="#aboutModal" role="button" data-toggle="modal" class="btn btn-youfolio infoButtons">about</a>
@@ -102,7 +77,7 @@ HORANCHORA          RANCH          8OOOOOOOO
 <div id="searchTags" class="span3">
 <div class="input-prepend">
   <span class="add-on"><span class="icon-tag"></span></span>
-  <input class="span10" id="prependedInput" type="text" placeholder="search tags">
+  <input class="span10 graySearch" id="prependedInput" type="text" placeholder="search tags">
 </div>
 </div>
 <div class="span3 offset6 topIcons">
@@ -181,18 +156,10 @@ HORANCHORA          RANCH          8OOOOOOOO
 
 </div>
 </div>
-<div class="row-fluid" id="footer">
-<div class="span2">
-<a href="http://www.youfolio.com/"><img class="bottomImage" src="img/FinalLogo_Grey.png" alt="YouFolio" onmouseover="this.src='img/FinalLogo_Green.png'" 
-onmouseout="this.src='img/FinalLogo_Grey.png'"/></a>
-</div>
-<div class="span3">
-<div class="copyright">Copyright 2013 All rights reserved</div>
-</div>
-<div class="span4 offset1">
-<div class="bottomLinks"><a href="">My Portfolio</a> <a href="">Gallery</a> <a href="jobBoard.html">Job Board</a> <a href="">Help</a></div>
-</div>
-</div>
+
+
+<ng-include src="'includes/bottomNav.html'"></ng-include>
+
 
 <!--Begin About Modal-->
 

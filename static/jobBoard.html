@@ -55,6 +55,123 @@ HORANCHORA          RANCH          8OOOOOOOO
 <title>YouFolio : Jobs</title>
 </head>
 <body>
-This is where jobs will go.
+<ng-include src="'includes/topNav.html'"></ng-include>
+<div id="jobsPage" class="row-fluid">
+<div class="span2 leftBar" id="leftJobs">
+<div class="leftContent">
+<img src="img/drew.jpeg"/>
+<p id="name">{{fname}} {{lname}}</p>
+<a href="#aboutModal" role="button" data-toggle="modal" class="btn btn-dark infoButtons">not you?</a>
+</div>
+</div>
+<div class="span8">
+ <div id="jobsCarousel" class="carousel slide">
+            <ol id="carouselNavJobs" class="carousel-indicators">
+	        <li data-target="#jobsCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#jobsCarousel" data-slide-to="1"></li>
+			<li data-target="#jobsCarousel" data-slide-to="2"></li>
+			<li data-target="#jobsCarousel" data-slide-to="3"></li>
+    
+            </ol><!-- Carousel items -->
+
+            <div class="carousel-inner">
+                <div class="active item">
+                    <div id="firstItem">
+                    <div class="itemContent">
+                   <div class="carouselJobInfo">
+                   <h3>Your Company Name</h3>
+                   <h4>Extra Long Position Available Title</h4>
+                   <p>This is a description of the job available. There are many duties and responsibilities. This job is very important to your future. If you don't apply to this job your life will be...</p>
+                   </div>
+                    <br/>
+                        <a href="#applyModal" role="button" data-toggle="modal" class="btn btn-pink btn-large signupButton">apply now</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div id="secondItem">
+                        <div class="itemContent">
+                   <div class="carouselJobInfo">
+                   <h3>Your Company Name</h3>
+                   <h4>Extra Long Position Available Title</h4>
+                   <p>This is a description of the job available. There are many duties and responsibilities. This job is very important to your future. If you don't apply to this job your life will be...</p>
+                   </div>
+                        <br/>
+                        <a href="#applyModal" role="button" data-toggle="modal" class="btn btn-pink btn-large signupButton">apply now</a>
+                    </div>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div id="thirdItem">
+                        <div class="itemContent">
+                    <div class="carouselJobInfo">
+                   <h3>Your Company Name</h3>
+                   <h4>Extra Long Position Available Title</h4>
+                   <p>This is a description of the job available. There are many duties and responsibilities. This job is very important to your future. If you don't apply to this job your life will be...</p>
+                   </div>
+
+                        <br/>
+                        <a href="#applyModal" role="button" data-toggle="modal" class="btn btn-pink btn-large signupButton">apply now</a>
+                    </div>
+
+                    </div>
+                </div>
+                                <div class="item">
+                    <div id="fourthItem">
+                        <div class="itemContent">
+                   <div class="carouselJobInfo">
+                   <h3>Your Company Name</h3>
+                   <h4>Extra Long Position Available Title</h4>
+                   <p>This is a description of the job available. There are many duties and responsibilities. This job is very important to your future. If you don't apply to this job your life will be...</p>
+                   </div>
+                        <br/>
+                        <a href="#applyModal" role="button" data-toggle="modal" class="btn btn-pink btn-large signupButton">apply now</a>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="span8 jobSearchRow">
+    <div class="span3 input-append">
+    <label>Keyword Search</label>
+    <input class="graySearch" id="appendedInput" type="text" placeholder="ex. graphic design, va">
+    <span class="add-on"><i class="icon-caret-right"></i></span>
+    </div>
+    <div class="span3 offset1 input-append">
+    <label>Show listings within</label>
+    <input class="graySearch" id="appendedDropdownButton" type="text">
+   <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+
+      <i class="icon-caret-down"></i>
+    </button>
+    <ul class="dropdown-menu">
+      <li>20 Miles</li>
+      <li>50 Miles</li>
+      <li>100 Miles</li>
+      <li>250 Miles</li>
+      <li>500+ Miles</li>
+    </ul>
+  </div>
+</div>
+    <div class="span3 offset1">
+    <label>&nbsp;</label>
+    <input class="graySearch" type="text" placeholder="zip code">
+    </div>
+    </div>
+    
+</div>
+</div>
+<ng-include src="'includes/bottomNav.html'"></ng-include>
+<script src="http://code.jquery.com/jquery.js" type="text/javascript">
+</script>
+<script src="lib/bootstrap.min.js" type="text/javascript">
+</script>
 </body>
 </html>
