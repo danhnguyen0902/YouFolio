@@ -15,14 +15,14 @@ from flask.ext.login import (LoginManager, current_user, login_required,
                             confirm_login, fresh_login_required)
 import argparse
 
-UPLOAD_FOLDER = 'static/uploads'
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__, static_url_path='')
 app.config.from_object(__name__)
 app.config.from_pyfile('config.cfg')
 
 DebugToolbarExtension(app)
+
+db = MongoEngine()
 
 
 class User(db.Document):
@@ -144,6 +144,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.heroku:
         app.config.from_pyfile('heroku.cfg')
-    db = MongoEngine()
+
     db.init_app(app)
     app.run(host="0.0.0.0", port=4000)
