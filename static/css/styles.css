@@ -1,6 +1,6 @@
 @import url("../fonts/lato/stylesheet.css");
 
-@import url("http://fonts.googleapis.com/css?family=Roboto+Slab");
+@import url("../fonts/roboto/stylesheet.css");
 body,
 html {
   font-family: "latoregular";
@@ -322,7 +322,7 @@ html {
   padding-bottom: 25px;
 }
 .topRoboto {
-  font-family: 'Roboto Slab';
+  font-family: 'roboto_slabregular';
   font-size: 24pt;
 }
 .signupButton {
@@ -332,11 +332,11 @@ html {
   color: white !important;
 }
 .bottomLogo {
-  width: 14%;
+  width: 120px;
   margin-right: 5%;
 }
 .bottomImage {
-  width: 80%;
+  width: 120px;
   height: auto;
 }
 .copyright {
@@ -397,7 +397,7 @@ html {
 }
 #name {
   color: white;
-  font-family: 'Roboto Slab';
+  font-family: 'roboto_slabregular';
   font-size: 12pt;
 }
 #occupation {
@@ -414,12 +414,12 @@ html {
   width: 75%;
   margin-bottom: 10px;
 }
-#navBarLogo {
+.navBarLogo {
   margin-top: -6px;
   width: 120px;
   height: auto;
 }
-#logoContainer {
+.logoContainer {
   height: 20px;
 }
 .container2 {
@@ -524,8 +524,14 @@ html {
 .navbar-inner {
   border: none !important;
   background-image: none !important;
-  background-color: white !important;
   font-family: "latoregular" !important;
+}
+.top-navbar-inner {
+  background-color: white !important;
+}
+.bottom-navbar-inner {
+  background-color: #363841 !important;
+  text-shadow: none;
 }
 @keyframes stretchContent {
   from {
@@ -633,4 +639,7 @@ html {
 }
 .jobSearchRow {
   margin-top: 35px;
+}
+.roboto {
+  font-family: 'roboto_slabregular';
 }
