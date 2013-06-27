@@ -55,7 +55,7 @@ HORANCHORA          RANCH          8OOOOOOOO
     <link rel="shortcut icon" href="img/favicon.ico">
 <title>YouFolio : Jobs</title>
 </head>
-<body>
+<body ng-controller="jobsController" id="jobsPage">
 <ng-include src="'includes/topNav.html'"></ng-include>
 <div id="jobsPage" class="row-fluid">
 <div class="span2 leftBar" id="leftJobs">
@@ -64,6 +64,48 @@ HORANCHORA          RANCH          8OOOOOOOO
 <p id="name">{{fname}} {{lname}}</p>
 <a href="#aboutModal" role="button" data-toggle="modal" class="btn btn-dark infoButtons">not you?</a>
 </div>
+<p>Filter Content</p>
+<!--Begin Accordian-->
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        <span>Job Type</span> <span class="icon-caret-down"></span>
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        <span>Industry</span> <span class="icon-caret-down"></span>
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        <span>Company</span> <span class="icon-caret-down"></span>
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--End Accordian-->
 </div>
 <div class="span8">
  <div id="jobsCarousel" class="carousel slide">
@@ -144,7 +186,7 @@ HORANCHORA          RANCH          8OOOOOOOO
     <input class="graySearch" id="appendedInput" type="text" placeholder="ex. graphic design, va">
     <span class="add-on"><i class="icon-caret-right"></i></span>
     </div>
-    <div class="span3 offset1 input-append">
+    <div class="span4 offset1 input-append">
     <label class="font14 roboto">Show listings within</label>
     <input class="graySearch" id="appendedDropdownButton" type="text">
    <div class="btn-group">
@@ -161,7 +203,10 @@ HORANCHORA          RANCH          8OOOOOOOO
     </ul>
   </div>
 </div>
-    <div class="span3 offset1">
+<div class="span1 of">
+<p class="font14 roboto">of</p>
+</div>
+    <div class="span3">
     <label>&nbsp;</label>
     <input class="graySearch" type="text" placeholder="zip code">
     </div>
@@ -170,6 +215,17 @@ HORANCHORA          RANCH          8OOOOOOOO
     <br/>
     <div class="span8">
     <p>Showing 1-25 of 32,000 listings for Graphic Designer</p>
+    </div>
+    <br/>
+    <div class="span8 jobPostingRow" ng-repeat="job in jobs">
+    <div class="span8">
+    <p class="jobTitleText">{{job.title}}</p>
+    <p class="jobCaptionText">{{job.company}}</p>
+    </div>
+    <div class="span4">
+    <p class="jobPostingInfo"><span class="icon-calendar"></span>&nbsp;{{job.date}}</p>
+    <p class="jobPostingInfo"><span class="icon-map-marker"></span>&nbsp;{{job.location}}</p>
+    </div>
     </div>
     
 </div>

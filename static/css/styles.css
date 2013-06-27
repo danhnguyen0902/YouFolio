@@ -643,3 +643,27 @@ html {
 .roboto {
   font-family: 'roboto_slabregular';
 }
+.jobTitleText {
+  font-family: 'roboto_slabregular';
+  font-size: 14pt;
+  color: #ef6969;
+}
+.jobCaptionText {
+  color: #757e88;
+}
+.jobPostingRow {
+  border-radius: 7px;
+  background-color: white;
+  padding: 10px 15px 0px 15px;
+  margin-bottom: 10px;
+}
+#jobsPage {
+  background-color: #f6f7fb;
+}
+.jobPostingInfo {
+  text-align: right;
+  color: #bdc2c7;
+}
+.of {
+  padding-top: 30px;
+}
