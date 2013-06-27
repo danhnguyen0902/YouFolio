@@ -667,3 +667,48 @@ html {
 .of {
   padding-top: 30px;
 }
+.accordion-body {
+  color: #e1e1e1;
+  background-color: #3c4047;
+  border: none;
+}
+.accordion-heading {
+  width: 100%;
+  margin-left: -78px;
+  position: relative;
+  left: 50%;
+  font-size: 12pt;
+}
+.accordion-heading a:link {
+  color: #bdc2c7;
+}
+.accordion-heading a:active {
+  color: white;
+}
+.accordion-heading a:hover {
+  color: white;
+  text-decoration: none;
+}
+.accordion-heading a:visited {
+  color: white;
+}
+.filterContent {
+  width: 100%;
+  color: white;
+  font-size: 14pt;
+  font-family: 'roboto_slabregular';
+  padding-top: 25px;
+  margin-top: 175px;
+  margin-left: -62.5px;
+  position: relative;
+  left: 50%;
+}
+#jobType {
+  padding-right: 70px;
+}
+#industry {
+  padding-right: 73px;
+}
+#company {
+  padding-right: 65px;
+}
