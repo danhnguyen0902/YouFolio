@@ -1,0 +1,22 @@
+<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+
+        <h3 id="loginModalLabel">Login</h3>
+    </div>
+    <div class="modal-body">
+        <form id="loginForm" name="loginForm" class="form-inline" method="post" action="login.html">
+            <label>Username</label>
+            <input id="loginUsername" name="loginUsername" type="text" placeholder="Username">
+
+            <label>Password</label>
+            <input id="loginPassword" name="loginPassword" type="password" placeholder="Password">
+            
+            <label class="checkbox">
+            <input type="checkbox" name="rememberMe" id="rememberMe"> Remember me</label>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button> <button class="btn btn-primary" type="submit">Login</button>
+    </div>    
+</div>

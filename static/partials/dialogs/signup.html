@@ -1,0 +1,46 @@
+<div modal="shouldBeOpen" close="close()" options="opts" style="width: 400px;" class="modal small">
+    <div class="modal-header text-center">
+        <button type="button" class="close" ng-click="close()">x</button>
+        <h3 id="signupModalLabel">Get Started</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="firstName">First Name</label>
+            <div class="controls">
+              <input type="text" id="firstName" placeholder="First Name">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="lastName">Last Name</label>
+            <div class="controls">
+              <input type="text" id="lastName" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="emailAddress">Email Address</label>
+            <div class="controls">
+              <input type="text" id="emailAddress" placeholder="Email Address">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputPassword">Password</label>
+            <div class="controls">
+              <input type="password" id="inputPassword" placeholder="Password">
+            </div>
+          </div>                        
+          <div class="text-center">            
+            <input type="checkbox"> I agree to the <a href="#">Terms &amp; Privacy Policy</a>.
+            <br />
+            <br />
+            <button type="submit" class="btn btn-large btn-youfolio">Let's Go!</button>
+            <p>
+                <a ng-click="close()">No Thanks</a>
+            </p>
+          </div>
+          </form>
+    </div>
+    </div>
+    <div class="modal-footer">        
+    </div>
+</div>
