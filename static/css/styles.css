@@ -712,3 +712,20 @@ html {
 #company {
   padding-right: 65px;
 }
+.accordion-inner span {
+  width: 100%;
+  margin-left: -75px;
+  position: relative;
+  left: 50%;
+  cursor: pointer;
+}
+.filterInfo {
+  font-family: "latoregular";
+  font-size: 10pt;
+  color: #acb8b6;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.pinkCheck {
+  color: #ef6969;
+  margin-left: -87px !important;
+}
