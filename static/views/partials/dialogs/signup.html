@@ -1,0 +1,47 @@
+<!--Begin Signup Modal-->
+<div id="signupModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h3 id="signupModalLabel">Get Started</h3>
+    </div>
+    <form id="signupForm" name="signupForm" novalidate ng-submit="signUp();" class="css-form form-inline text-center">
+        <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="control-group">
+            <p>First Name</p>
+            <div class="controls">
+              <input type="text" id="firstName" placeholder="First Name" ng-model="signup.firstName" required>
+            </div>
+          </div>
+          <div class="control-group">
+            <p>Last Name</p>
+            <div class="controls">
+              <input type="text" id="lastName" placeholder="Last Name" ng-model="signup.lastName" required>
+            </div>
+          </div>
+          <div class="control-group">
+            <p>Email Address</p>
+            <div class="controls">
+              <input type="email" id="emailAddress" placeholder="Email Address" ng-model="signup.emailAddress" required>
+            </div>
+          </div>
+          <div class="control-group">
+            <p>Password</p>
+            <div class="controls">
+              <input type="password" id="inputPassword" placeholder="Password" ng-model="signup.inputPassword">
+            </div>
+          </div>                        
+          <div class="text-center">            
+            <input type="checkbox" id="signupTerms" ng-model="signup.agreeToTerms" required> I agree to the <a href="#">Terms &amp; Privacy Policy</a>.
+            <br />
+            <br />
+            <input type="submit" class="btn btn-large btn-youfolio">Let's Go!</input>
+            <p>                 
+                <a  data-dismiss="modal" aria-hidden="true">No Thanks</a>
+            </p>
+          </div>
+          </form>
+        </div>
+    </form>
+</div>
+<!--End Signup Modal-->

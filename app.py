@@ -54,7 +54,6 @@ class User(db.Document):
 def index():
     return app.send_static_file('index.html')
 
-
 class UserAPI(MethodView):
     def get(self, username):
         if username is None:

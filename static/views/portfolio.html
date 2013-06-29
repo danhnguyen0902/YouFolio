@@ -1,0 +1,106 @@
+<div ng-controller="portfolioController">
+  <ng-include src="'includes/tophat.html'"></ng-include>
+  <div id="portfolioPage" class="row-fluid">
+    <div id="leftPortfolio" class="span2 leftBar">
+      <div class="leftContent">
+        <a href="" role="button" class="btn btn-dark infoButtons"><i class="icon-gear"></i> &nbsp;edit profile</a>
+        <img src="img/drew.jpeg"/>
+        <p id="name"><span ng-bind="fname"></span> <span ng-bind="lname"></span></p>
+        <p id="occupation">{{occupation}}</p>
+        <p id="location">{{city}}, {{state}}</p>
+        <a href="#aboutModal" role="button" data-toggle="modal" class="btn btn-youfolio infoButtons">about</a>
+        <a href="#contactModal" role="button" data-toggle="modal" class="btn btn-youfolio infoButtons">contact</a>
+      </div>
+    </div>
+    <div class="span8">
+    <!--Row 1-->
+    <div class="row-fluid">
+      <div id="searchTags" class="span3">
+        <div class="input-prepend">
+          <span class="add-on"><span class="icon-tag"></span></span>
+          <input class="span10 graySearch" id="prependedInput" type="text" placeholder="search tags">
+        </div>
+      </div>
+    <div class="span3 offset6 topIcons">
+    <i id="calendar" class="icon-calendar icon-2x"></i>
+    <i id="marker" class="icon-map-marker icon-2x"></i>
+    <i id="share" class="icon-share icon-2x"></i>
+    </div>
+    </div>
+    <!-- End Row 1-->
+
+    <!--Row 2-->
+    <div class="row-fluid">
+     <ul class="thumbnails">
+        <li class="span4" ng-repeat="item in row1">
+          <div class="thumbnail">
+          <div class="imgIcons">
+            <a href=""><i class="icon-star icon-2x"></i></a>
+            <a href="#contentModal" data-toggle="modal"><i class="icon-eye-open icon-2x"></i></a>
+            <a href=""><i class="icon-share icon-2x"></i></a>
+          </div>
+            <img class="portfolioContentImage" ng-src="{{item.image}}" alt="">
+            <div class="caption">
+              <h4>{{item.title}}</h4>
+              <p>{{item.date}}</p>
+              <p class="tags"><i class="icon-tag"></i>{{item.tags}}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--End Row 2-->
+
+    <!--Row 3-->
+    <div class="row-fluid">
+     <ul class="thumbnails">
+                  <li class="span4" ng-repeat="item in row2">
+                    <div class="thumbnail">
+                    <div class="imgIcons">
+                    <a href=""><i class="icon-star icon-2x"></i></a>
+                    <a href="#contentModal" data-toggle="modal"><i class="icon-eye-open icon-2x"></i></a>
+                    <a href=""><i class="icon-share icon-2x"></i></a>
+                    </div>
+                      <img class="portfolioContentImage" ng-src="{{item.image}}" alt="">
+                      <div class="caption">
+                        <h4>{{item.title}}</h4>
+                        <p>{{item.date}}</p>
+                        <p class="tags"><i class="icon-tag"></i>{{item.tags}}</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+    </div>
+    <!--End Row 3-->
+
+    <!--Row 4-->
+    <div class="row-fluid">
+      <ul class="thumbnails">
+        <li class="span4" ng-repeat="item in row3">
+          <div class="thumbnail">
+          <div class="imgIcons">
+          <a href=""><i class="icon-star icon-2x"></i></a>
+          <a href="#contentModal" data-toggle="modal"><i class="icon-eye-open icon-2x"></i></a>
+          <a href=""><i class="icon-share icon-2x"></i></a>
+          </div>
+            <img class="portfolioContentImage" ng-src="{{item.image}}" alt="">
+            <div class="caption">
+              <h4>{{item.title}}</h4>
+              <p>{{item.date}}</p>
+              <p class="tags"><i class="icon-tag"></i>{{item.tags}}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--End Row 4-->
+
+    </div>
+  </div>
+
+  <ng-include src="'includes/catfish.html'"></ng-include>
+
+  <ng-include src="'partials/dialogs/contact.html'"></ng-include>
+  <ng-include src="'partials/dialogs/about.html'"></ng-include>
+  <ng-include src="'partials/dialogs/content.html'"></ng-include> 
+</div>

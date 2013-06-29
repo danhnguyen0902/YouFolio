@@ -1,0 +1,52 @@
+<div id="header" class="row-fluid">
+    <span id="topLogo"><img src="img/FinalLogo_White.png" width="100px" height="auto"></span> <span id="alreadyRegistered"><a class="loginText" href="#loginModal" role="button" data-toggle="modal">login</a> | <a class="loginText" href="#companyModal" role="button" data-toggle="modal">companies</a></span>
+    <div id="signupArea" ng-controller="SignupController" >
+        <ng-include src="'views/partials/dialogs/signup.html'"></ng-include>   
+        <div id="landingCarousel" class="carousel slide">
+            <ol id="carouselNavLanding" class="carousel-indicators">
+            <li data-target="#landingCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#landingCarousel" data-slide-to="1"></li>
+            <li data-target="#landingCarousel" data-slide-to="2"></li>        
+            </ol><!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <div id="firstItem">
+                    <div class="itemContent">
+                    <span class="topRoboto">YouFolio helps you showcase yourself to the world.</span>
+                    <br/>
+                        <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span><br>
+                        <br/>
+                        <a href="#signupModal" role="button" data-toggle="modal" class="btn btn-youfolio btn-large signupButton">sign up</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div id="secondItem">
+                        <div class="itemContent">
+                    <span class="topRoboto">YouFolio helps you discover collaborators and job opportunities.</span>
+                    <br/>
+                        <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span><br>
+                        <br/>
+                        <a href="#signupModal" role="button" data-toggle="modal" class="btn btn-youfolio btn-large signupButton">sign up</a>
+                    </div>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div id="thirdItem">
+                        <div class="itemContent">
+                    <span class="topRoboto">YouFolio helps you showcase yourself to the world.</span>
+                    <br/>
+                        <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span><br>
+                        <br/>
+                        <a href="#signupModal" role="button" data-toggle="modal" class="btn btn-youfolio btn-large signupButton">sign up</a>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
