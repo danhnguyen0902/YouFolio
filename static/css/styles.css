@@ -38,8 +38,6 @@ html {
   top: 506px;
   left: 50%;
 }
-
-
 #carouselNavLanding li {
   margin: 10px;
 }
@@ -713,6 +711,14 @@ html {
 }
 #company {
   padding-right: 65px;
+}
+.modal.small {
+  width: 40%;
+  /* respsonsive width */
+
+  margin-left: -20%;
+  /* width/2) */
+
 }
 .accordion-inner span {
   width: 100%;
