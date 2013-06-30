@@ -57,7 +57,6 @@ class User(db.Document, UserMixin):
 
 
 @app.route('/')
-@login_required
 def index():
     return app.send_static_file('index.html')
 

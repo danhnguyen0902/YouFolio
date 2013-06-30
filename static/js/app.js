@@ -3,6 +3,11 @@ app = angular.module("youfolio", ['ui.bootstrap']).config(function($routeProvide
     templateUrl: 'pages/home.html', 
     controller: 'HomeController' 
   });
+  $routeProvider.when('/portfolio', {
+    templateUrl: 'pages/portfolio.html',
+    controller: 'PortfolioController'
+  });
+
   $routeProvider.otherwise({ redirectTo: '/' });
 });
 
