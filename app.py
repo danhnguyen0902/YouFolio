@@ -10,10 +10,8 @@ from werkzeug import secure_filename
 from flask.views import MethodView
 from flask.ext.mongoengine import MongoEngine
 from flask_debugtoolbar import DebugToolbarExtension
-from flask.ext.login import (LoginManager, current_user, login_required,
-                            login_user, logout_user, UserMixin, 
-                            # AnonymousUser,
-                            confirm_login, fresh_login_required)
+from flask.ext.security import Security, MongoEngineUserDatastore, \
+    UserMixin, RoleMixin, login_required
 import argparse
 
 
@@ -26,10 +24,18 @@ DebugToolbarExtension(app)
 db = MongoEngine()
 
 
-class User(db.Document):
-    username = db.StringField(required=True, max_length=50, min_length=2, primary_key=True)
-    password = db.StringField(required=True, max_length=50, min_length=4)
-    email = db.EmailField(required=True, max_length=100)
+class Role(db.Document, RoleMixin):
+    name = db.StringField(max_length=80, unique=True)
+    description = db.StringField(max_length=255)
+
+
+class User(db.Document, UserMixin):
+    username = db.StringField(max_length=50, min_length=2, required=True, unique=True)
+    email = db.EmailField(max_length=100, required=True)
+    password = db.StringField(max_length=100, required=True, min_length=5)
+    active = db.BooleanField(default=True)
+    confirmed_at = db.DateTimeField()
+    roles = db.ListField(db.ReferenceField(Role), default=[])
     first_name = db.StringField(max_length=50, min_length=2)
     last_name = db.StringField(max_length=50, min_length=2)
     files = db.ListField(db.GridFSProxy)
@@ -51,16 +57,18 @@ class User(db.Document):
 
 
 @app.route('/')
+@login_required
 def index():
     return app.send_static_file('index.html')
+
 
 class UserAPI(MethodView):
     def get(self, username):
         if username is None:
             # return a list of users
-            return User.objects().to_json()
+            return User.objects.exclude('password').to_json()
         else:
-            return User.objects(username=username).to_json()
+            return User.objects(username=username).exclude('password').to_json()
 
     def post(self):
         username = request.form.get('username', None)
@@ -160,6 +168,17 @@ def uploaded_file(filename):
                                filename)
 
 
+# Setup Flask-Security
+user_datastore = MongoEngineUserDatastore(db, User, Role)
+security = Security(app, user_datastore)
+
+
+# Create a user to test with
+@app.before_first_request
+def setup():
+    user_datastore.create_user(email='foo@bar.com', password='password', username='ronald')
+
+
 if __name__ == "__main__":
     app.debug = True
     parser = argparse.ArgumentParser(description='Main flask app for YouFolio')
@@ -169,4 +188,5 @@ if __name__ == "__main__":
         app.config.from_pyfile('heroku.cfg')
 
     db.init_app(app)
+    User.drop_collection()
     app.run(host="0.0.0.0", port=port)
