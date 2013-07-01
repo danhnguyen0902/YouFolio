@@ -3,8 +3,8 @@
         <span id="topLogo"><img src="img/FinalLogo_White.png" width="100px" height="auto"></span>
         <span id="alreadyRegistered"><a class="loginText" href="#loginModal">login</a> | <a class="loginText" href="#companyModal">companies</a></span>
     </div>
-    <div ng-controller="IntroCarouselController">
-        <div ng-controller="SignUpController">
+    <div ng-controller="SignUpController">
+        <div ng-controller="IntroCarouselController">    
             <carousel interval="introInterval" id="landingCarousel">
                 <slide ng-repeat="slide in slides" active="slide.active">
                     <div class="carousel-inner">
@@ -13,17 +13,18 @@
                                 <div class="itemContent">
                                 <span class="topRoboto">YouFolio helps you showcase yourself to the world.</span>
                                 <br/>
-                                    <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span><br>
-                                    <br/>                                   
-                                        <a href="#signupModal" role="button" ng-click="open()" class="btn btn-youfolio btn-large signupButton">sign up</a>
+                                    <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span>
+                                    <br/>
+                                    <br/>
+                                    <button class="btn btn-youfolio btn-large signupButton" ng-click="open()">sign up</button>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </slide>
             </carousel>
-            <ng-include src="'partials/dialogs/signup.html'"></ng-include>
         </div>
+        <ng-include src="'partials/dialogs/signup.html'"></ng-include>
     </div>
 </div>
-<div id="introCarouselIndicators"></div>
