@@ -16,3 +16,32 @@ function JobsController($scope) {
         "location": "Everywhere, USA",
     }, ];
 };
+
+function JobsAccordion($scope) {
+    $scope.oneAtATime = false;
+
+    $scope.groups = [
+        {
+            title: "Job Type",
+            content: ['All Types', 'Design', 'Other'],
+            id: "jobType",
+        },
+        {
+            title: "Industry",
+            content: ['Item 1', 'Item 2', 'Item 3'],
+            id: "industry",
+        },
+        {
+            title: "Company",
+            content: ['Item 1', 'Item 2', 'Item 3'],
+            id: "company",
+        },
+    ];
+
+    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
+
+    $scope.addItem = function() {
+        var newItemNo = $scope.items.length + 1;
+        $scope.items.push('Item ' + newItemNo);
+    };
+}

@@ -8,57 +8,16 @@
 <a href="#aboutModal" role="button" data-toggle="modal" class="btn btn-dark infoButtons">not you?</a>
 </div>
 <p class="filterContent">Filter Content</p>
-<!--Begin Accordian-->
-<div class="accordion" id="accordion2">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        <span id="jobType">Job Type</span> <span class="icon-caret-down"></span>
-      </a>
-    </div>
-    <div id="collapseOne" class="accordion-body collapse">
-      <div class="accordion-inner">
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">All Types</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Full-time()</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Intern()</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Part-time()</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Seasonal()</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Contract and Project()</span></span><br/>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-        <span id="industry">Industry</span> <span class="icon-caret-down"></span>
-      </a>
-    </div>
-    <div id="collapseTwo" class="accordion-body collapse">
-      <div class="accordion-inner">
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Industry One</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Industry Two</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Industry Three</span></span><br/>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-        <span id="company">Company</span> <span class="icon-caret-down"></span>
-      </a>
-    </div>
-    <div id="collapseThree" class="accordion-body collapse">
-      <div class="accordion-inner">
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Company One</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Company Two</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Company Three</span></span><br/>
-        <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">Company Four</span></span><br/>
-      </div>
-    </div>
-  </div>
-
-</div>
-<!--End Accordian-->
+    <!--Begin New Accordian-->
+    <div ng-controller="JobsAccordion">
+    <accordion close-others="oneAtATime">
+        <accordion-group ng-repeat="group in groups">
+            <accordion-heading><span id="{{group.id}}">{{group.title}}</span> <span class="icon-caret-down"></span></accordion-heading>
+            <div ng-repeat="item in group.content"> <span class="" onclick="$(this).toggleClass('icon-check-sign pinkCheck');"><span class="filterInfo">{{item}}</span></span><br/></div>
+        </accordion-group>
+    </accordion>
+        </div>
+    <!--End New Accordian-->
 </div>
 <div class="span8">
  <div id="jobsCarousel" class="carousel slide">
