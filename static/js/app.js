@@ -19,6 +19,10 @@ app = angular.module("youfolio", ['ui.bootstrap']).config(function ($routeProvid
         templateUrl: 'pages/help.html',
         controller: 'HelpController'
     });
+    $routeProvider.when('/team', {
+        templateUrl: 'pages/team.html',
+        controller: 'TeamController'
+    });
     $routeProvider.otherwise({ redirectTo: '/' });
 });
 
