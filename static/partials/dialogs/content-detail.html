@@ -1,0 +1,23 @@
+<div>
+    <div class="modal-header text-center">        
+        <button style="float: right" type="button" class="cancel" ng-click="close()">x</button>
+        <h3 id="contentDetailModelLabel">{{ item.title }}</h3>
+    </div>
+    <div class="modal-body"> 
+        <form id="contentDetailForm" name="contentDetailForm" novalidate ng-submit="upsertContent()" class="form-horizontal"> 
+            <div class="control-group">
+              <label class="control-label" for="firstName">Content Tags</label>
+              <div class="controls">
+                <div class="tag-input-ctn">
+                    <div data-ng-repeat="(key, tag) in item.inputTags" class="input-tag">
+                        <span class="icon-tag"> {{ tag.name }}</span>
+                        <div class="delete-tag" ng-click="deleteTag(key)">&times;</div>
+                    </div>
+                    <input ng-model="newTag" type="text" tag-input="" new-tag="addTag()">
+                </div>
+              </div>
+            </div>            
+        </form> 
+    </div>
+</div>
+
