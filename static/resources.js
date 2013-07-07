@@ -1,5 +1,7 @@
+/*
+ This is where we include all javascript files for the app.
+ */
 head.js(
-
     /* External Libraries
      * Location lib
      */
