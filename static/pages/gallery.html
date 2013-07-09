@@ -4,10 +4,9 @@
         <!--Search and controls-->
         <div class="row-fluid">
             <ng-include src="'partials/components/searchTags.html'"></ng-include>
-            <div class="span3 offset6 topIcons">
-                <i id="calendar" class="icon-calendar icon-2x"></i>
-                <i id="marker" class="icon-map-marker icon-2x"></i>
-                <i id="share" class="icon-share icon-2x"></i>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" ng-model="projectsPeopleModel" btn-radio="'Projects'">Projects</button>
+                <button type="button" class="btn btn-primary" ng-model="projectsPeopleModel" btn-radio="'People'">People</button>
             </div>
         </div>
         <!-- End search and controls-->
@@ -61,5 +60,4 @@
         </div>
         <!--End Gallery Projects-->
     </div>
-    <script src="../lib/bootstrap.min.js" type="text/javascript"></script>
 </div>
