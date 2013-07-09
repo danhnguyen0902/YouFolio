@@ -9,6 +9,10 @@ app = angular.module("youfolio", ['ui.bootstrap'])
                 templateUrl: 'pages/portfolio.html',
                 controller: 'PortfolioController'
             });
+    $routeProvider.when('/jobs', {
+        templateUrl: 'pages/jobs.html',
+        controller: 'JobsController'
+    });
             $routeProvider.when('/gallery', {
                 templateUrl: 'pages/gallery.html',
                 controller: 'GalleryController'
@@ -17,7 +21,10 @@ app = angular.module("youfolio", ['ui.bootstrap'])
                 templateUrl: 'pages/help.html',
                 controller: 'HelpController'
             });
-
+    $routeProvider.when('/team', {
+        templateUrl: 'pages/team.html',
+        controller: 'TeamController'
+    });
             $routeProvider.otherwise({ redirectTo: '/' });
             $dialogProvider.options({backdropClick: false, dialogFade: true});
         }]

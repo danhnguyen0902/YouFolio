@@ -1,4 +1,4 @@
-function HomeController($scope, $dialog) {  
+function HomeController($scope, $dialog, $location) {
 
     // var LoginController = function($scope, $location) {
     //   $scope.credentials = { username: "", password: "" };
@@ -8,7 +8,7 @@ function HomeController($scope, $dialog) {
     //       alert("Username must be ralph!");
     //     }
     //   };
-    // };    
+    // };
 };
 
 function IntroCarouselController ($scope) {

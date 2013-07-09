@@ -1,5 +1,5 @@
 <div ng-controller="PortfolioController">
-    <ng-include src="'includes/tophat.html'"></ng-include>
+    <ng-include src="'includes/topNav.html'"></ng-include>
     <div id="portfolioPage" class="row-fluid">
         <div id="leftPortfolio" class="span2 leftBar">
             <div class="leftContent">
@@ -20,12 +20,7 @@
         <div class="span8">
             <!--Row 1-->
             <div class="row-fluid">
-                <div id="searchTags" class="span3">
-                    <div class="input-prepend">
-                        <span class="add-on"><span class="icon-tag"></span></span>
-                        <input class="span10 graySearch" id="prependedInput" type="text" placeholder="search tags">
-                    </div>
-                </div>
+                <ng-include src="'partials/components/searchTags.html'"></ng-include>
                 <div class="span3 offset6 topIcons">
                     <i id="calendar" class="icon-calendar icon-2x"></i>
                     <i id="marker" class="icon-map-marker icon-2x"></i>
