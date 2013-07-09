@@ -3,17 +3,28 @@
     <div id="galleryPage" class="row-fluid">
         <!--Search and controls-->
         <div class="row-fluid">
-            <ng-include src="'partials/components/searchTags.html'"></ng-include>
-            <div class="btn-group">
-                <button type="button" class="btn btn-primary" ng-model="projectsPeopleModel" btn-radio="'Projects'">Projects</button>
-                <button type="button" class="btn btn-primary" ng-model="projectsPeopleModel" btn-radio="'People'">People</button>
+            <div id="searchTags" class="span3 offset1">
+                <div class="input-prepend">
+                    <span class="add-on"><span class="icon-tag"></span></span>
+                    <input class="span10 graySearch" id="prependedInput" type="text" placeholder="search tags">
+                </div>
+            </div>
+            <!--<ng-include src="'partials/gallery/checkedTags.html'"></ng-include>   -->
+            <div id="topButtons" class="span4">
+                <button type="button" class="btn btn-white" ng-model="checkedTagsModel.Fresh" btn-checkbox>Fresh</button>
+                <button type="button" class="btn btn-white" ng-model="checkedTagsModel.Popular" btn-checkbox>Popular</button>
+                <button type="button" class="btn btn-white" ng-model="checkedTagsModel.Favorites" btn-checkbox>Favorites</button>
+            </div>
+            <div id="topToggles" class="span3 offset1 btn-group">
+                <button type="button" class="btn btn-white" ng-model="projectsPeopleModel" btn-radio="'Projects'">Projects</button>
+                <button type="button" class="btn btn-white" ng-model="projectsPeopleModel" btn-radio="'People'">People</button>
             </div>
         </div>
         <!-- End search and controls-->
         <!--Gallery People-->
         <div class="row-fluid">
             <ul class="thumbnails">
-                <li class="span4" ng-repeat="item in row2">
+                <li class="span4" ng-repeat="item in people">
                     <div class="thumbnail">
                         <div class="imgIcons">
                             <a href=""><i class="icon-star icon-2x"></i></a>
@@ -38,7 +49,7 @@
         <!--Gallery Projects-->
         <div class="row-fluid">
             <ul class="thumbnails">
-                <li class="span4" ng-repeat="item in row2">
+                <li class="span4" ng-repeat="item in projects">
                     <div class="thumbnail">
                         <div class="imgIcons">
                             <a href=""><i class="icon-star icon-2x"></i></a>

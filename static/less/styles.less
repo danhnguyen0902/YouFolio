@@ -6,6 +6,7 @@
 
 @youfolioGreen: #02bc9b;
 @youfolioPink: #ef6969;
+@grayBackground: #f6f7fb;
 @landingTextColor: #2e425f;
 @regular: "latoregular";
 @light: "latolight";
@@ -525,6 +526,26 @@ body, html {
   padding-bottom: 5px;
 }
 
+#topButtons {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  button {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+#topToggles {
+  padding-top: 15px;
+  padding-bottom: 5px;
+  button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 @media only screen and (min-width: 800px) {
   .leftBar {
     width: 15%;
@@ -607,7 +628,7 @@ body, html {
 }
 
 #portfolioPage {
-  background-color: #f6f7fb;
+  background-color: @grayBackground;
 }
 
 .navbar-inner {
@@ -762,7 +783,7 @@ body, html {
 }
 
 #jobsPage {
-  background-color: #f6f7fb;
+  background-color: @grayBackground;
 }
 
 .jobPostingInfo {
@@ -821,16 +842,20 @@ body, html {
 .accordion-toggle:link {
   color: #bdc2c7 !important;
 }
+
 .accordion-toggle:active {
   color: white !important;
 }
+
 .accordion-toggle:hover {
   color: white !important;
   text-decoration: none;
 }
+
 .accordion-toggle:visited {
   color: white !important;
 }
+
 #industry {
   padding-right: 73px;
 }
@@ -881,4 +906,8 @@ body, html {
   color: #333 !important;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
   -webkit-font-smoothing: antialiased;
+}
+
+#galleryPage {
+  background-color: @grayBackground;
 }
