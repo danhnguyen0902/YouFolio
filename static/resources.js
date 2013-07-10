@@ -3,10 +3,11 @@
  */
 head.js(
     /* External Libraries
-     * Location lib
+     * Location: lib/ (or CDN's..?)
      */     
     "http://code.jquery.com/jquery-1.10.1.min.js",
     "http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js",
+    "lib/angular-resource.js",    
     "http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js",    
     /* Main app
      * Location: js/app.js
