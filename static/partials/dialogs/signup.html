@@ -4,7 +4,7 @@
         <h3 id="signupModalLabel">{{ WelcomeMessage }}</h3>
     </div>
     <div class="modal-body"> 
-      <form id="signupForm" name="signupForm" novalidate ng-submit="signUp()" class="form-horizontal">        
+      <form id="signupForm" name="signupForm" ng-submit="signUp(form)" class="form-horizontal">        
             <div class="control-group">
               <label class="control-label" for="firstName">First Name</label>
               <div class="controls">
@@ -33,7 +33,7 @@
               <input type="checkbox" id="signupTerms" ng-model="form.agreeToTerms" required> I agree to the <a href="#">Terms &amp; Privacy Policy</a>.
               <br />
               <br />
-              <button type="submit" class="btn btn-large btn-youfolio">Let's Go!</button>
+              <input type="submit" class="btn btn-large btn-youfolio" value="{{ SubmitText }}" />
               <p>
                   <a ng-click="close()">No Thanks</a>
               </p>

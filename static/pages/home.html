@@ -1,6 +1,9 @@
 <div ng-controller="HomeController">
     <div id="header" class="row-fluid">
         <ng-include src="'includes/topNav.html'"></ng-include>
+        <script type="text/javascript">
+            $('.carousel-indicators').first().css("margin-top", "100px;");
+        </script>
         <carousel interval="introInterval" id="landingCarousel">
             <slide ng-repeat="slide in slides" active="slide.active">
                 <div class="carousel-inner">
