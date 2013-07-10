@@ -30,7 +30,7 @@ app = angular.module("youfolio", ['ui.bootstrap'])
         }]
     );
 
-//FOR DEV BROWSER CACHE CLEARING...FOR FUCK SAKES.
+//FOR DEV BROWSER CACHE CLEARING...FOR FUCK'S SAKE!
 app.run(function($rootScope, $templateCache) {
    $rootScope.$on('$viewContentLoaded', function() {
       $templateCache.removeAll();

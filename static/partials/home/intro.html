@@ -1,10 +1,10 @@
 <div id="header" class="row-fluid">
-    <div id="tophat" class="span12">
+    <!-- <div id="tophat" class="span12">
         <span id="topLogo"><img src="img/FinalLogo_White.png" width="100px" height="auto"></span>
         <span id="alreadyRegistered"><a class="loginText" href="#loginModal">login</a> | <a class="loginText" href="#companyModal">companies</a></span>
-    </div>
-    <div ng-controller="SignUpController">
-        <div ng-controller="IntroCarouselController">    
+    </div> -->
+    <div>
+        <div>    
             <script type="text/javascript">
                 $('.carousel-indicators').first().css("margin-top", "100px;");
             </script>
@@ -20,7 +20,7 @@
                                     <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span>
                                     <br/>
                                     <br/>
-                                    <button class="btn btn-youfolio btn-large signupButton" ng-click="open()">sign up</button>
+                                    <button class="btn btn-youfolio btn-large signupButton" ng-click="openSignUpForm()">sign up</button>
                                 </div>
                             </div>
                         </div>
@@ -28,6 +28,5 @@
                 </slide>
             </carousel>
         </div>
-        <ng-include src="'partials/dialogs/signup.html'"></ng-include>
     </div>
 </div>

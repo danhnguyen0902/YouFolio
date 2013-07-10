@@ -1,34 +1,20 @@
-function HomeController($scope, $dialog, $location) {
-
-    // var LoginController = function($scope, $location) {
-    //   $scope.credentials = { username: "", password: "" };
-
-    //   $scope.login = function(credentials) {
-    //     if ($scope.credentials.username !== "ralph") {
-    //       alert("Username must be ralph!");
-    //     }
-    //   };
-    // };
-};
-
-function IntroCarouselController ($scope) {
+app.controller('HomeController', [ '$dialog', '$scope', function($dialog, $scope) { 
     $scope.introInterval = 7000;
     $scope.slides = [
         {css: 'firstItem'},
         {css: 'secondItem'},
         {css: 'thirdItem'}
     ];
-};
+    $scope.WelcomeMessage = 'Get Started Now!';
 
-function SignUpController ($scope) {
-    $scope.open = function () {
-        $scope.shouldBeOpen = true;
+    $scope.openSignUpForm = function() {
+        console.log('I got clicked!');
+        var dialogOpts = {
+                templateUrl: 'partials/dialogs/signup.html',
+                controller: 'SignUpController',
+                dialogFade: false
+            };
+        var d = $dialog.dialog(dialogOpts);
+        d.open();
     };
-    $scope.close = function () {
-        $scope.shouldBeOpen = false;
-    };
-    $scope.opts = {
-        backdropFade: true,
-        dialogFade: true
-    };
-};
+}]);

@@ -1,36 +1,36 @@
-<div modal="shouldBeOpen" close="close()" options="opts" style="width: 400px;" class="modal">
+<div>
     <div class="modal-header text-center">
         <button type="button" class="close" ng-click="close()">x</button> 
-        <h3 id="signupModalLabel">Get Started!</h3>
+        <h3 id="signupModalLabel">{{ WelcomeMessage }}</h3>
     </div>
     <div class="modal-body"> 
       <form id="signupForm" name="signupForm" novalidate ng-submit="signUp()" class="form-horizontal">        
             <div class="control-group">
               <label class="control-label" for="firstName">First Name</label>
               <div class="controls">
-                <input type="text" id="firstName" placeholder="First Name" ng-model="signup.firstName" required>
+                <input type="text" id="firstName" placeholder="First Name" ng-model="form.firstName" required>
               </div>
             </div>
             <div class="control-group">
               <label class="control-label" for="lastName">Last Name</label>
               <div class="controls">
-                <input type="text" id="lastName" placeholder="Last Name" ng-model="signup.lastName" required>
+                <input type="text" id="lastName" placeholder="Last Name" ng-model="form.lastName" required>
               </div>
             </div>
             <div class="control-group">
               <label class="control-label" for="emailAddress">Email Address</label>
               <div class="controls">
-                <input type="email" id="emailAddress" placeholder="Email Address" ng-model="signup.emailAddress" required>
+                <input type="email" id="emailAddress" placeholder="Email Address" ng-model="form.emailAddress" required>
               </div>
             </div>
             <div class="control-group">
               <label class="control-label" for="inputPassword">Password</label>
               <div class="controls">
-                <input type="password" id="inputPassword" placeholder="Password" ng-model="signup.inputPassword">
+                <input type="password" id="inputPassword" placeholder="Password" ng-model="form.inputPassword">
               </div>
             </div>                        
             <div class="text-center">            
-              <input type="checkbox" id="signupTerms" ng-model="signup.agreeToTerms" required> I agree to the <a href="#">Terms &amp; Privacy Policy</a>.
+              <input type="checkbox" id="signupTerms" ng-model="form.agreeToTerms" required> I agree to the <a href="#">Terms &amp; Privacy Policy</a>.
               <br />
               <br />
               <button type="submit" class="btn btn-large btn-youfolio">Let's Go!</button>
