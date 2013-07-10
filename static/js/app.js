@@ -29,10 +29,3 @@ app = angular.module("youfolio", ['ui.bootstrap'])
             $dialogProvider.options({backdropClick: false, dialogFade: true});
         }]
     );
-
-//FOR DEV BROWSER CACHE CLEARING...FOR FUCK'S SAKE!
-app.run(function($rootScope, $templateCache) {
-   $rootScope.$on('$viewContentLoaded', function() {
-      $templateCache.removeAll();
-   });
-});
