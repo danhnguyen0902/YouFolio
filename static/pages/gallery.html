@@ -11,63 +11,57 @@
             </div>
             <!--<ng-include src="'partials/gallery/checkedTags.html'"></ng-include>   -->
             <div id="topButtons" class="span4">
-                <button type="button" class="btn btn-white" ng-model="checkedTagsModel.Fresh" btn-checkbox>Fresh</button>
-                <button type="button" class="btn btn-white" ng-model="checkedTagsModel.Popular" btn-checkbox>Popular</button>
-                <button type="button" class="btn btn-white" ng-model="checkedTagsModel.Favorites" btn-checkbox>Favorites</button>
+                <button type="button" class="btn btn-white" ng-model="checkedTagsModel.Fresh" btn-checkbox>Fresh
+                </button>
+                <button type="button" class="btn btn-white" ng-model="checkedTagsModel.Popular" btn-checkbox>Popular
+                </button>
+                <button type="button" class="btn btn-white" ng-model="checkedTagsModel.Favorites" btn-checkbox>
+                    Favorites
+                </button>
             </div>
-            <div id="topToggles" class="span3 offset1 btn-group">
-                <button type="button" class="btn btn-white" ng-model="projectsPeopleModel" btn-radio="'Projects'">Projects</button>
-                <button type="button" class="btn btn-white" ng-model="projectsPeopleModel" btn-radio="'People'">People</button>
+            <div id="topToggles" class="span2 offset2 btn-group">
+                <button type="button" class="btn btn-white" ng-model="projectsPeopleModel" btn-radio="'Projects'">
+                    Projects
+                </button>
+                <button type="button" class="btn btn-white" ng-model="projectsPeopleModel" btn-radio="'People'">People
+                </button>
             </div>
         </div>
         <!-- End search and controls-->
         <!--Gallery People-->
-        <div class="row-fluid">
-            <ul class="thumbnails">
-                <li class="span4" ng-repeat="item in people">
-                    <div class="thumbnail">
-                        <div class="imgIcons">
-                            <a href=""><i class="icon-star icon-2x"></i></a>
-                            <a href="#contentModal" data-toggle="modal"><i class="icon-eye-open icon-2x"></i></a>
-                            <a href=""><i class="icon-share icon-2x"></i></a>
-                        </div>
-                        <img class="portfolioContentImage" ng-src="{{item.image}}" alt="">
-
-                        <div class="caption">
-                            <h4>{{item.title}}</h4>
-
-                            <p>{{item.date}}</p>
-
-                            <p class="tags"><i class="icon-tag"></i>{{item.tags}}</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <div ng-if="projectsPeopleModel == 'People'" class="row-fluid">
+            <div class="span10 offset1">
+            <div class="span6 peopleContent" ng-repeat="item in people">
+                Hello
+            </div>
+            </div>
         </div>
         <!--End Gallery People-->
 
         <!--Gallery Projects-->
-        <div class="row-fluid">
-            <ul class="thumbnails">
-                <li class="span4" ng-repeat="item in projects">
-                    <div class="thumbnail">
-                        <div class="imgIcons">
-                            <a href=""><i class="icon-star icon-2x"></i></a>
-                            <a href="#contentModal" data-toggle="modal"><i class="icon-eye-open icon-2x"></i></a>
-                            <a href=""><i class="icon-share icon-2x"></i></a>
+        <div ng-if="projectsPeopleModel == 'Projects'" class="row-fluid">
+            <div class="span10 offset1">
+                <ul class="thumbnails">
+                    <li class="span3" ng-repeat="item in projects">
+                        <div class="thumbnail">
+                            <div class="imgIcons">
+                                <a href=""><i class="icon-star icon-2x"></i></a>
+                                <a href="#contentModal" data-toggle="modal"><i class="icon-eye-open icon-2x"></i></a>
+                                <a href=""><i class="icon-share icon-2x"></i></a>
+                            </div>
+                            <img class="portfolioContentImage" ng-src="{{item.image}}" alt="">
+
+                            <div class="caption">
+                                <h4>{{item.title}}</h4>
+
+                                <p>{{item.date}}</p>
+
+                                <p class="tags"><i class="icon-tag"></i>{{item.tags}}</p>
+                            </div>
                         </div>
-                        <img class="portfolioContentImage" ng-src="{{item.image}}" alt="">
-
-                        <div class="caption">
-                            <h4>{{item.title}}</h4>
-
-                            <p>{{item.date}}</p>
-
-                            <p class="tags"><i class="icon-tag"></i>{{item.tags}}</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!--End Gallery Projects-->
     </div>
