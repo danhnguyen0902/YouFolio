@@ -1,5 +1,29 @@
 <div ng-controller="HomeController">
-    <ng-include src="'partials/home/intro.html'"></ng-include>
+    <div id="header" class="row-fluid">
+        <ng-include src="'includes/topNav.html'"></ng-include>
+        <script type="text/javascript">
+            $('.carousel-indicators').first().css("margin-top", "100px;");
+        </script>
+        <carousel interval="introInterval" id="landingCarousel">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <div id="{{slide.css}}">
+                            <div class="itemContent">
+                                <span class="topRoboto">YouFolio helps you showcase yourself to the world.</span>
+                                <br/>
+                                <br/>
+                                <span class="lightItalic font14">get started now, it's free! or <span id="watchDemo"><a class="boldItalic" href="">watch the demo</a></span></span>
+                                <br/>
+                                <br/>
+                                <button class="btn btn-youfolio btn-large signupButton" ng-click="openSignUpForm()">sign up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </slide>
+        </carousel>
+    </div>
     <ng-include src="'partials/home/explain.html'"></ng-include>
     <ng-include src="'partials/home/team.html'"></ng-include>
 </div>

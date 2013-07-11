@@ -60,7 +60,6 @@ class User(db.Document, UserMixin):
 def index():
     return app.send_static_file('index.html')
 
-
 class UserAPI(MethodView):
     def get(self, username):
         if username is None:

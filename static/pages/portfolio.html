@@ -36,7 +36,7 @@
                         <div class="thumbnail">
                             <div class="imgIcons">
                                 <a href=""><i class="icon-star icon-2x"></i></a>
-                                <a href="#contentModal" data-toggle="modal"><i class="icon-eye-open icon-2x"></i></a>
+                                <a href="" ng-click="openContentEditor(item)"><i class="icon-eye-open icon-2x"></i></a>
                                 <a href=""><i class="icon-share icon-2x"></i></a>
                             </div>
                             <img class="portfolioContentImage" ng-src="{{item.image}}" alt="">
@@ -52,64 +52,11 @@
                     </li>
                 </ul>
             </div>
-            <!--End Row 2-->
-
-            <!--Row 3-->
-            <div class="row-fluid">
-                <ul class="thumbnails">
-                    <li class="span4" ng-repeat="item in row2">
-                        <div class="thumbnail">
-                            <div class="imgIcons">
-                                <a href=""><i class="icon-star icon-2x"></i></a>
-                                <a href="#contentModal" data-toggle="modal"><i class="icon-eye-open icon-2x"></i></a>
-                                <a href=""><i class="icon-share icon-2x"></i></a>
-                            </div>
-                            <img class="portfolioContentImage" ng-src="{{item.image}}" alt="">
-
-                            <div class="caption">
-                                <h4>{{item.title}}</h4>
-
-                                <p>{{item.date}}</p>
-
-                                <p class="tags"><i class="icon-tag"></i>{{item.tags}}</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!--End Row 3-->
-
-            <!--Row 4-->
-            <div class="row-fluid">
-                <ul class="thumbnails">
-                    <li class="span4" ng-repeat="item in row3">
-                        <div class="thumbnail">
-                            <div class="imgIcons">
-                                <a href=""><i class="icon-star icon-2x"></i></a>
-                                <a href="#contentModal" data-toggle="modal"><i class="icon-eye-open icon-2x"></i></a>
-                                <a href=""><i class="icon-share icon-2x"></i></a>
-                            </div>
-                            <img class="portfolioContentImage" ng-src="{{item.image}}" alt="">
-
-                            <div class="caption">
-                                <h4>{{item.title}}</h4>
-
-                                <p>{{item.date}}</p>
-
-                                <p class="tags"><i class="icon-tag"></i>{{item.tags}}</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!--End Row 4-->
+            <!--End Row 2-->            
 
         </div>
     </div>
-    <!--Commented out because the bottom nav is included in index.html-->
-    <!--<ng-include src="'includes/catfish.html'"></ng-include>-->
-
     <ng-include src="'partials/dialogs/contact.html'"></ng-include>
     <ng-include src="'partials/dialogs/about.html'"></ng-include>
-    <ng-include src="'partials/dialogs/content.html'"></ng-include>
+    
 </div>
