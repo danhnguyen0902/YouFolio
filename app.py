@@ -12,6 +12,8 @@ from flask.ext.mongoengine import MongoEngine
 from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.security import Security, MongoEngineUserDatastore, \
     UserMixin, RoleMixin, login_required
+from flask.ext.security.utils import encrypt_password
+
 import argparse
 
 
@@ -32,7 +34,7 @@ class Role(db.Document, RoleMixin):
 class User(db.Document, UserMixin):
     username = db.StringField(max_length=50, min_length=2, required=True, unique=True)
     email = db.EmailField(max_length=100, required=True)
-    password = db.StringField(max_length=100, required=True, min_length=5)
+    password = db.StringField(max_length=500, required=True, min_length=5)
     active = db.BooleanField(default=True)
     confirmed_at = db.DateTimeField()
     roles = db.ListField(db.ReferenceField(Role), default=[])
@@ -174,7 +176,7 @@ security = Security(app, user_datastore)
 # Create a user to test with
 @app.before_first_request
 def setup():
-    user_datastore.create_user(email='foo@bar.com', password='password', username='ronald')
+    user_datastore.create_user(email='foo@bar.com', password=encrypt_password('password'), username='ronald')
 
 
 if __name__ == "__main__":
