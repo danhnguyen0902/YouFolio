@@ -8,16 +8,22 @@ function GalleryController($scope) {
 
     $scope.people = [
         {
+            "name": "Wagnasty",
             "image": "img/content.png",
-            "title": "Row 2",
-            "date": "16 June 2013",
-            "tags": "tag1, tag2",
+            "title": "Graphic Designer",
+            "city": "Fairfax",
+            "state": "VA",
+            "project1": "img/content.png",
+            "project2": "img/content.png",
         },
         {
+            "name": "Wagpiece",
             "image": "img/content.png",
-            "title": "Row 2",
-            "date": "16 June 2013",
-            "tags": "tag1, tag2",
+            "title": "Web Developer",
+            "city": "Blacksburg",
+            "state": "VA",
+            "project1": "img/content.png",
+            "project2": "img/content.png",
         },
     ];
 

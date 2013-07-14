@@ -31,17 +31,17 @@
         <!--Gallery People-->
         <div ng-if="projectsPeopleModel == 'People'" class="row-fluid">
             <div class="span10 offset1">
-                <div class="span6 peopleContent" ng-repeat="item in people">
+                <div class="span6 peopleContent" ng-repeat="person in people">
                     <div class="row-fluid">
-                        <div class="span2 offset1"></div>
+                        <div class="span2 offset1"><img class="peopleGalleryImage" src="{{person.image}}" alt="{{person.name}}"/></div>
                         <div class="span4">
-                            Name<br/>
-                            Title<br/>
-                            Location<br/>
+                            <span class="personName">{{person.name}}</span><br/>
+                            <span class="peopleGalleryInfo">{{person.title}}</span><br/>
+                            <span class="peopleGalleryInfo">{{person.city}}, {{person.state}}</span><br/>
                             <button type="button" class="btn btn-youfolio followButton">Follow</button>
                         </div>
-                        <div class="span2" style="background-color:green;"></div>
-                        <div class="span2" style="background-color:orange;"></div>
+                        <div class="span2"><img class="peopleGalleryImage" src="{{person.project1}}" alt="{{person.name}}"/></div>
+                        <div class="span2"><img class="peopleGalleryImage" src="{{person.project2}}" alt="{{person.name}}"/></div>
                     </div>
                 </div>
             </div>
