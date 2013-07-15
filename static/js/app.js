@@ -25,6 +25,10 @@ app = angular.module("youfolio", ['ui.bootstrap'])
                 templateUrl: 'pages/team.html',
                 controller: 'TeamController'
             });
+            $routeProvider.when('/companies', {
+                templateUrl: 'pages/companies.html',
+                controller: 'CompaniesController'
+            });
             $routeProvider.otherwise({ redirectTo: '/' });
             $dialogProvider.options({backdropClick: false, dialogFade: true});
         }]

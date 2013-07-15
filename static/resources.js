@@ -22,6 +22,7 @@ head.js(
     "js/controllers/jobs.js",
     "js/controllers/portfolio.js",
     "js/controllers/team.js",
+    "js/controllers/companies.js",
     /* Dialog Controllers
      * Location: js/dialog
      */
