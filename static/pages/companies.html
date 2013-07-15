@@ -1,6 +1,20 @@
 <div ng-controller="CompaniesController">
     <ng-include src="'includes/topNav.html'"></ng-include>
     <div id="companyPage" class="row-fluid">
-        Companies page goes here
+        <div id="leftCompanies" class="span2 leftBar">
+            <div class="leftContent">
+                <span id="name">{{companyName}}</span><br/>
+
+                <span class="icon-map-marker"></span>&nbsp;<span id="location">{{companyCity}}, {{companyState}}</span><br/>
+
+                <span class="icon-flag"></span>&nbsp;<span id="founded">Founded {{companyYear}}</span> <br/>
+
+                <span class="icon-group"></span>&nbsp;<span id="people">{{employeeNumber}} People</span> <br/> <br/>
+
+                <a href="#aboutModal" role="button" data-toggle="modal" class="btn btn-youfolio infoButtons">about</a>
+                <a href="#contactModal" role="button" data-toggle="modal"
+                   class="btn btn-youfolio infoButtons">contact</a>
+            </div>
+        </div>
     </div>
 </div>

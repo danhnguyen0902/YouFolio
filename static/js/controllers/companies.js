@@ -1,3 +1,7 @@
 function CompaniesController($scope) {
-         $scope.hello = 'Hello World!';
+    $scope.companyName = "NJI New Media";
+    $scope.companyCity = "Alexandria";
+    $scope.companyState = "VA";
+    $scope.companyYear = 2009;
+    $scope.employeeNumber = 27;
 };
