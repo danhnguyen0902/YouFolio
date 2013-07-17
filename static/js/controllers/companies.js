@@ -4,7 +4,8 @@ function CompaniesController($scope) {
     $scope.companyState = "VA";
     $scope.companyYear = 2009;
     $scope.employeeNumber = 27;
-    $scope.bio = "Hello we are a company! Work for us!";
+    $scope.bio = "We are an award-winning interactive agency that specializes in website design, web development, User Experience (UX) design multimedia production and online communications strategy in the Washington, D.C. area.";
+    $scope.companyImage = "img/drew.jpeg";
     $scope.jobs = [{
         "title": "Junior Graphic Design/Intern",
         "company": "Google Analytics",
@@ -21,4 +22,8 @@ function CompaniesController($scope) {
         "date": "16 June 2013",
         "location": "Everywhere, USA",
     }, ];
+
+    $scope.companyTwitter = "http://www.twitter.com/robbiecore";
+    $scope.companyFacebook = "http://www.facebook.com/robertwilliamwagner";
+    $scope.companyURL = "njimedia.com";
 };
