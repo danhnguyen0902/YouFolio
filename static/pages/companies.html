@@ -1,20 +1,48 @@
 <div ng-controller="CompaniesController">
     <ng-include src="'includes/topNav.html'"></ng-include>
-    <div id="companyPage" class="row-fluid">
+    <div id="companiesPage" class="row-fluid">
         <div id="leftCompanies" class="span2 leftBar">
-            <div class="leftContent">
+            <div class="leftCompaniesContent">
                 <span id="name">{{companyName}}</span><br/>
 
-                <span class="icon-map-marker"></span>&nbsp;<span id="location">{{companyCity}}, {{companyState}}</span><br/>
+                <span class="icon-map-marker"></span>&nbsp;<span
+                    id="location">{{companyCity}}, {{companyState}}</span><br/>
 
                 <span class="icon-flag"></span>&nbsp;<span id="founded">Founded {{companyYear}}</span> <br/>
 
                 <span class="icon-group"></span>&nbsp;<span id="people">{{employeeNumber}} People</span> <br/> <br/>
 
-                <a href="#aboutModal" role="button" data-toggle="modal" class="btn btn-youfolio infoButtons">about</a>
-                <a href="#contactModal" role="button" data-toggle="modal"
-                   class="btn btn-youfolio infoButtons">contact</a>
+                <button popover-placement="right" popover="<h4>About</h4> {{companyName}}"
+                        class="btn btn-youfolio companyInfoButtons">about
+                </button>
+                <button popover-placement="right" popover="On the Right!" class="btn btn-youfolio companyInfoButtons">
+                    contact
+                </button>
             </div>
+        </div>
+        <div class="span8">
+            <div id="searchTags" class="span4">
+                <div class="input-prepend">
+                    <span class="add-on"><span class="icon-tag"></span></span>
+                    <input class="span12 graySearch" id="prependedInput" type="text" placeholder="search tags">
+                </div>
+            </div>
+            <!--<ng-include src="'partials/gallery/checkedTags.html'"></ng-include>   -->
+            <div id="companiesTopButtons" class="span5 offset3">
+                <button type="button" id="fresh" class="btn btn-white" ng-model="checkedTagsModel.Fresh" btn-checkbox>
+                    Fresh
+                </button>
+                <button type="button" id="popular" class="btn btn-white" ng-model="checkedTagsModel.Popular"
+                        btn-checkbox>Popular
+                </button>
+                <button type="button" id="jobListings" class="btn btn-white" ng-model="checkedTagsModel.Favorites"
+                        btn-checkbox>
+                    Job Listings
+                </button>
+            </div>
+        </div>
+        <div class="span8 jobPostingRow" ng-repeat="job in jobs">
+            <ng-include src="'partials/components/jobPosting.html'"></ng-include>
         </div>
     </div>
 </div>
